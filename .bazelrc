@@ -34,14 +34,22 @@ build --define=tsl_link_protobuf=true
 build -c opt
 
 build --config=short_logs
+build --config=mkl_aarch64
 
 build --copt=-DMLIR_PYTHON_PACKAGE_PREFIX=jaxlib.mlir.
+# build --copt=-fno-omit-frame-pointer
 
 # Later Bazel flag values override earlier values; if CUDA/ROCM/TPU are enabled,
 # these values are overridden.
 build --@xla//xla/python:enable_gpu=false
 
 ###########################################################################
+
+# Config setting to build oneDNN with Compute Library for the Arm Architecture (ACL).
+build:mkl_aarch64 --define=build_with_mkl_aarch64=true
+build:mkl_aarch64 --define=build_with_openmp=true
+build:mkl_aarch64 --define=build_with_acl=true
+build:mkl_aarch64 -c opt
 
 build:posix --copt=-fvisibility=hidden
 build:posix --copt=-Wno-sign-compare
