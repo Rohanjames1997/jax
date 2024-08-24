@@ -34,6 +34,7 @@ build --define=tsl_link_protobuf=true
 build -c opt
 
 build --config=short_logs
+build --config=mkl_aarch64_threadpool
 
 build --copt=-DMLIR_PYTHON_PACKAGE_PREFIX=jaxlib.mlir.
 
