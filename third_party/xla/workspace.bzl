@@ -24,8 +24,8 @@ load("//third_party:repo.bzl", "tf_http_archive", "tf_mirror_urls")
 # XLA_COMMIT = "95e3eea8d2aebd55160ed4185a38345ae98ab500"
 # XLA_SHA256 = "7e23f70fe0b2459ac8a27e6b7b53e3643a053346244bd7e83c6b944827d0b9e1"
 
-XLA_COMMIT = "e49d641a5b0511ccc2da1536d79ae1d2af4731b3"
-XLA_SHA256 = "d2837f5e9d771d49afbae9d6478d807e526690e97511f1d1f7c482f89df14448"
+XLA_COMMIT = "1197a6c225460e67635db9693338ccc9a5ccda91"
+XLA_SHA256 = "70007b7173967325268208dd018e4a6fcf121310a0d1d8fa431102253bd68e44"
 
 def repo():
     tf_http_archive(
